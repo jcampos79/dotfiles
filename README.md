@@ -10,8 +10,11 @@ Files
 Usage
 ---------
 
-    * $ git clone https://github.com/jcampos79/
-    * $ ln ~/.vim/.vimrc ~/.vimrc
+     $ git clone https://github.com/jcampos79/dotfiles ~/dotfiles
+     $ ln -sf ~/dotfiles/.vimrc ~/.vimrc
+     $ ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+     $ ln -sf ~/dotfiles/.tmuxline.conf ~/.tmuxline.conf
+
 
 
 
@@ -19,8 +22,20 @@ Plugins
 ---------
 - vim
 	* neobundle
+	* vim-proc
+    * vim-fugitive
+    * ctrlp
+    * vim-colorschemes
+    * vim-airline
+    * vim-airline-themes
+    * tmuxline
+    * nerdtree
+    * vimwiki
+    * vm-instant-markdown
 - tmux
 	* tpm
+	* resurrect
+	* sensible
 
 
 Updates
