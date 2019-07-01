@@ -36,6 +36,7 @@ Plugins
 	* tpm
 	* resurrect
 	* sensible
+    * tmux-mem-cpu-load
 
 
 Updates
