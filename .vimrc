@@ -1,8 +1,8 @@
 "General Options------------------------------
 let mapleader = ","
 set autoindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set laststatus=2
 " Visual Bell instead of beep
@@ -47,10 +47,11 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
-" NeoBundle 'klen/python-mode'
 NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'vimwiki'
+" NeoBundle 'vimwiki'
+" Add ansible specific plugin
+NeoBundle 'pearofducks/ansible-vim'
 NeoBundle 'suan/vim-instant-markdown'
 
 " You can specify revision/branch/tag.
@@ -74,27 +75,16 @@ filetype plugin indent on
 NeoBundleCheck
 "End NeoBundle Scripts-------------------------
 
+" ansible-vim specific------------------------
+let g:ansible_unindent_after_newline = 1
+let g:ansible_attribute_highlight = "ob"
+let g:ansible_name_highlight = 'b'
 
-"Vim-airlinei----------------------------------
+"Vim-airline----------------------------------
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'luna'
 let g:airline#extensions#tmuxline#enabled = 0
 
-
-"Python-mode settings--------------------------
-"let g:pymode_rope_completion = 1
-"---------------------------------
-
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2014 Feb 05
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -156,6 +146,7 @@ if has("autocmd")
 
   " For all text files set 'textwidth' to 78 characters.
   autocmd FileType text setlocal textwidth=78
+  autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
