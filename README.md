@@ -23,15 +23,14 @@ Plugins
 - vim
 	* neobundle
 	* vim-proc
-    * vim-fugitive
-    * ctrlp
-    * vim-colorschemes
-    * vim-airline
-    * vim-airline-themes
-    * tmuxline
-    * nerdtree
-    * vimwiki
-    * vm-instant-markdown
+  * vim-fugitive
+  * ctrlp
+  * vim-colorschemes
+  * vim-airline
+  * vim-airline-themes
+  * tmuxline
+  * nerdtree
+  * polyglot
 - tmux
 	* tpm
 	* resurrect

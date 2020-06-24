@@ -1,5 +1,7 @@
 "General Options------------------------------
 let mapleader = ","
+set nu
+set relativenumber
 set autoindent
 set tabstop=2
 set shiftwidth=2
@@ -49,10 +51,11 @@ NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'sheerun/vim-polyglot'
 " NeoBundle 'vimwiki'
 " Add ansible specific plugin
-NeoBundle 'pearofducks/ansible-vim'
-NeoBundle 'suan/vim-instant-markdown'
+" NeoBundle 'pearofducks/ansible-vim'
+" NeoBundle 'suan/vim-instant-markdown'
 
 " You can specify revision/branch/tag.
 " NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
