@@ -52,13 +52,6 @@ NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'sheerun/vim-polyglot'
-" NeoBundle 'vimwiki'
-" Add ansible specific plugin
-" NeoBundle 'pearofducks/ansible-vim'
-" NeoBundle 'suan/vim-instant-markdown'
-
-" You can specify revision/branch/tag.
-" NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
 " Installation check
 if iCanHazNeoBundle == 0
@@ -97,6 +90,7 @@ endif
 " Use Vim settings, rather than Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+set nomodeline
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -237,18 +231,3 @@ imap <leader>" ""<ESC>i
 imap <leader>( ()<ESC>i
 imap <leader>[ []<ESC>i
 imap <leader>{ {}<ESC>i
-
-"-----------------------------------------------------------------------------
-" vimwiki Plugin settings
-"-----------------------------------------------------------------------------
-set nocompatible
-filetype plugin on
-syntax on
-" vimwiki markdown support
-let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
-" helpage -> :h vimwiki-syntax
-
-" vim-instant-markdown Settings
-" Instant Markdown previews for Vim
-let g:instant_markdown_autostart = 0
-map <leader>md :InstantMarkdownPreview<CR>
