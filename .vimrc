@@ -7,6 +7,10 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set laststatus=2
+" Disable csv formating polyglot
+let g:polyglot_disabled = ['csv']
+" ------------------------------
+
 " Visual Bell instead of beep
 set vb                     
 "----------------------------
