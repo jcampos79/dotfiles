@@ -12,7 +12,7 @@ let g:polyglot_disabled = ['csv']
 " ------------------------------
 
 " Visual Bell instead of beep
-set vb                     
+set vb
 "----------------------------
 
 "NeoBundle Scripts-----------------------------
@@ -24,15 +24,15 @@ endif
 let iCanHazNeoBundle=1
 let NeoBundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
 if !filereadable(NeoBundle_readme)
-    echo "Installing NeoBundle.."
-    echo ""
-    silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-    let iCanHazNeoBundle=0
+  echo "Installing NeoBundle.."
+  echo ""
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+  let iCanHazNeoBundle=0
 endif
 
 if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -59,9 +59,9 @@ NeoBundle 'sheerun/vim-polyglot'
 
 " Installation check
 if iCanHazNeoBundle == 0
-    echo "Installing Bundles, please ignore key map error messages"
-    echo ""
-    :NeoBundleInstall
+  echo "Installing Bundles, please ignore key map error messages"
+  echo ""
+  :NeoBundleInstall
 endif
 
 " Required:
@@ -82,7 +82,7 @@ let g:ansible_name_highlight = 'b'
 
 "Vim-airline----------------------------------
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'luna'
+let g:airline_theme = 'onedark'
 let g:airline#extensions#tmuxline#enabled = 0
 
 
@@ -143,21 +143,21 @@ if has("autocmd")
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
-  au!
+    au!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
-  autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+    " For all text files set 'textwidth' to 78 characters.
+    autocmd FileType text setlocal textwidth=78
+    autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  " Also don't do it when the mark is in the first line, that is the default
-  " position when opening a file.
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
+    " When editing a file, always jump to the last known cursor position.
+    " Don't do it when the position is invalid or when inside an event handler
+    " (happens when dropping a file on gvim).
+    " Also don't do it when the mark is in the first line, that is the default
+    " position when opening a file.
+    autocmd BufReadPost *
+          \ if line("'\"") > 1 && line("'\"") <= line("$") |
+          \   exe "normal! g`\"" |
+          \ endif
 
   augroup END
 
@@ -172,7 +172,7 @@ endif " has("autocmd")
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
-		  \ | wincmd p | diffthis
+        \ | wincmd p | diffthis
 endif
 " Save your backup files to a less annoying place than the current directory.
 " If you have .vim-backup in the current directory, it'll use that.
@@ -215,7 +215,7 @@ if exists("+undofile")
 endif
 
 " color scheme
-colorscheme antares
+colorscheme luna-term
 
 "-----------------------------------------------------------------------------
 " NERD Tree Plugin Settings
